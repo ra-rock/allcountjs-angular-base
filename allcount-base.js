@@ -406,7 +406,7 @@ function listDirective(directiveName, templateUrl) {
 
                     scope.navigate = function (entityId) {
                         if (attrs.navigate) {
-                            scope.$parent.$eval(attrs.navigate, {$entityId: entityId});
+                            scope.$parent.$eval(attrs.navigate, {$entityId: entityId, $entityTypeId: scope.entityCrudId.relationFieldTypeId});
                         }
                     };
 
