@@ -411,7 +411,7 @@ function listDirective(directiveName, templateUrl) {
                             window.location = window.location.origin + '/entity/' + scope.entityCrudId.relationFieldTypeId + '/';
                     };
 
-                    scope.hasNavigate = !!attrs.navigate;
+                    scope.hasNavigate = !!attrs.navigate || !!attrs.navigateTo;
 
                     scope.headerClass = function (fd) {
                         var cls = {};
