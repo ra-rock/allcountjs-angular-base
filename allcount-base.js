@@ -407,7 +407,8 @@ function listDirective(directiveName, templateUrl) {
                     scope.navigate = function (entityId) {
                         if (attrs.navigate) {
                             scope.$parent.$eval(attrs.navigate, {$entityId: entityId, $entityTypeId: scope.entityCrudId.relationFieldTypeId});
-                        }
+                        }else if {
+                            window.location = window.location.origin + '/entity/' + scope.entityCrudId.relationFieldTypeId + '/';
                     };
 
                     scope.hasNavigate = !!attrs.navigate;
